@@ -1,0 +1,9 @@
+
+<h1>Task's details'</h1>
+
+<%= "#{completed_icon(@task)} #{@task.id} - #{@task.title}".html_safe %>
+<br>
+<h3>Description</h3>
+<p><%= @task.details %></p>
+<br>
+<%= link_to 'UPDATE TASK', edit_path %>

@@ -1,0 +1,17 @@
+<h1>Tasks list</h1>
+
+<% @tasks.each do |task| %>
+  <%= link_to "#{completed_icon(task)} #{task.id} - #{task.title}".html_safe, task_path(task) %>
+  <span>
+  <%= link_to "Delete", delete_path(task),
+      method: :delete,
+      data: { confirm: "If he is dead, he is dead. Ok?" } %>
+  </span>
+  <br>
+<% end %>
+
+<br>
+
+
+<br>
+<%= link_to 'CREATE NEW TASK', new_path %>
