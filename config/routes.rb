@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post 'tasks', to: 'tasks#create', as: 'create'
 
   # Edit task
-  patch 'tasks', to: 'tasks#update', as: 'update'
+  patch 'tasks/:id', to: 'tasks#update', as: 'update'
 
   # Passar a linguiça numa tarefa
   delete 'tasks/:id', to: 'tasks#delete', as: 'delete'
